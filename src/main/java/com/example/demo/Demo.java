@@ -29,16 +29,23 @@ public class Demo {
 
         try {
 
-            Repository localRepo = new FileRepository(gitDir + "/.git");
+            Repository localRepo = new FileRepository(dir + "/.git");
+            System.out.println(1);
             Git git = new Git(localRepo);
+            System.out.println(2);
             CredentialsProvider cp = new UsernamePasswordCredentialsProvider(userName, pass);
+            System.out.println(3);
             git.pull().setCredentialsProvider(cp).call();
+            System.out.println(4);
             git.close();
+            System.out.println(5);
             localRepo.close();
+            System.out.println(6);
 
         } catch (Exception e) {
             return e.getLocalizedMessage();
         }
+        System.out.println(7);
         return "success";
 
     }
