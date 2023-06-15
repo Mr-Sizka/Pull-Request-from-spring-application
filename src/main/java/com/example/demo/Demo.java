@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @CrossOrigin
 @Controller
-@RequestMapping("/user")
+@RequestMapping("user")
 public class Demo {
 
     @GetMapping
@@ -20,7 +20,7 @@ public class Demo {
         return pullReq(
                 "C:\\Users\\sisuk\\Downloads\\demo",
                 "https://github.com/Mr-Sizka/demo.git",
-                "Code-Piggy",
+                "mr-sizka",
                 "Sisuka#9ruuqpjpy"
         );
     }
@@ -29,7 +29,7 @@ public class Demo {
 
         try {
 
-            Repository localRepo = new FileRepository(dir + "/.git");
+            Repository localRepo = new FileRepository(gitDir + "/.git");
             Git git = new Git(localRepo);
             CredentialsProvider cp = new UsernamePasswordCredentialsProvider(userName, pass);
             git.pull().setCredentialsProvider(cp).call();
