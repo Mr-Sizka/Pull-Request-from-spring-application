@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class Demo {
 
     @GetMapping
-    public void get(){
-        pullReq(
+    public String get(){
+        return pullReq(
                 "C:\\Users\\sisuk\\Downloads\\demo",
                 "https://github.com/Mr-Sizka/demo.git",
                 "Code-Piggy",
