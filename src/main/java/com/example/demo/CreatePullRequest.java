@@ -18,12 +18,12 @@ public class CreatePullRequest {
         String owner = "mr-sizka";
         String repo = "demo";
         String baseBranch = "master";
-        String headBranch = "feet3";
+        String headBranch = "feet5";
         String title = "Pull Request Title";
         String body = "Pull Request Description";
 
         String apiUrl = "https://api.github.com/repos/" + owner + "/" + repo + "/pulls";
-        String auth = "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"; // Replace with your actual GitHub access token
+        String auth = "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"; // Replace with your actual GitHub access token
 
         String jsonInputString = "{"
                 + "\"title\": \"" + title + "\","
