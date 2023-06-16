@@ -12,16 +12,18 @@ import java.nio.charset.StandardCharsets;
 
 @Service
 public class CreatePullRequest {
+
     public String pullReq() throws IOException {
-        String owner = "owner";
-        String repo = "repo name";
+
+        String owner = "mr-sizka";
+        String repo = "demo";
         String baseBranch = "master";
         String headBranch = "feet3";
         String title = "Pull Request Title";
         String body = "Pull Request Description";
 
         String apiUrl = "https://api.github.com/repos/" + owner + "/" + repo + "/pulls";
-        String auth = "github access token"; // Replace with your actual GitHub access token
+        String auth = "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"; // Replace with your actual GitHub access token
 
         String jsonInputString = "{"
                 + "\"title\": \"" + title + "\","
