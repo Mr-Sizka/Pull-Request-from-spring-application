@@ -9,6 +9,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 
 @Service
 public class CreatePullRequest {
@@ -32,11 +33,13 @@ public class CreatePullRequest {
                 + "\"base\": \"" + baseBranch + "\""
                 + "}";
 
+        String valueToEncode = "mr-sizka" + ":" + "Sisuka#9ruuqpjpy";
+
         URL url = new URL(apiUrl);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("POST");
         conn.setRequestProperty("Content-Type", "application/json");
-        conn.setRequestProperty("Authorization", "Bearer " + auth);
+        conn.setRequestProperty("Authorization", "Basic " + Base64.getEncoder().encodeToString(valueToEncode.getBytes()));
         conn.setDoOutput(true);
 
         try (OutputStream os = conn.getOutputStream()) {
