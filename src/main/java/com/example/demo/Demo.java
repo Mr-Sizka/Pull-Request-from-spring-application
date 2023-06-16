@@ -36,12 +36,12 @@ public class Demo {
         String USERNAME = "mr-sizka";
         String PASSWORD = "Sisuka#9ruuqpjpy";
         String baseBranch = "master";
-        String headBranch = "feet3";
+        String headBranch = "feet4";
         String title = "Pull Request Title";
         String body = "Pull Request Description";
 
         String apiUrl = "https://api.github.com/repos/" + owner + "/" + repo + "/pulls";
-        String auth = "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"; // Replace with your actual GitHub access token
+        String auth = "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"; // Replace with your actual GitHub access token
 
         String credentials = USERNAME + ":" + PASSWORD;
 
