@@ -18,7 +18,7 @@ public class CreatePullRequest {
         String owner = "mr-sizka";
         String repo = "demo";
         String baseBranch = "master";
-        String headBranch = "feet4";
+        String headBranch = "feet5";
         String title = "Pull Request Title";
         String body = "Pull Request Description";
 
