@@ -15,15 +15,15 @@ public class CreatePullRequest {
 
     public String pullReq() throws IOException {
 
-        String owner = "mr-sizka";
-        String repo = "demo";
-        String baseBranch = "master";
-        String headBranch = "feet5";
+        String owner = "owner";
+        String repo = "repo";
+        String baseBranch = "baseBranch";
+        String headBranch = "headBranch";
         String title = "Pull Request Title";
         String body = "Pull Request Description";
 
         String apiUrl = "https://api.github.com/repos/" + owner + "/" + repo + "/pulls";
-        String auth = "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"; // Replace with your actual GitHub access token
+        String auth = "GitHub access token"; // Replace with your actual GitHub access token
 
         String jsonInputString = "{"
                 + "\"title\": \"" + title + "\","
