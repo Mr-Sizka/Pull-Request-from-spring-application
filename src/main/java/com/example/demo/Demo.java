@@ -44,7 +44,7 @@ public class Demo {
         String auth = "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"; // Replace with your actual GitHub access token
 
         String credentials = USERNAME + ":" + PASSWORD;
-        String encodedCredentials = Base64.getEncoder().encodeToString(credentials.getBytes(StandardCharsets.UTF_8));
+
 
         String jsonInputString = "{"
                 + "\"title\": \"" + title + "\","
@@ -57,7 +57,7 @@ public class Demo {
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("POST");
         conn.setRequestProperty("Content-Type", "application/json");
-        conn.setRequestProperty("Authorization", "Basic " + encodedCredentials);
+        conn.setRequestProperty("Authorization", "Bearer " + auth);
         conn.setDoOutput(true);
 
         try (OutputStream os = conn.getOutputStream()) {
